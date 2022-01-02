@@ -1,5 +1,4 @@
 #include "libftprintf.h"
-#include <stdarg.h>
 
 int ft_format_print(char format, va_list args)
 {
