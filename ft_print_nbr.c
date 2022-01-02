@@ -1,6 +1,6 @@
 #include "libftprintf.h"
 
-static size_t	ft_count(int n)
+static int  ft_count(int n)
 {
     size_t	i;
 
@@ -17,12 +17,10 @@ static size_t	ft_count(int n)
     return (i);
 }
 
-int ft_print_nbr(int n)
+static void ft_put_nbr(int n)
 {
     long int	n2;
-    int i;
 
-    i = ft_count(n);
     n2 = (long int)n;
     if (n2 < 0)
     {
@@ -30,7 +28,15 @@ int ft_print_nbr(int n)
         n2 *= -1;
     }
     if (n2 / 10 != 0)
-        ft_print_nbr(n2 / 10);
+        ft_put_nbr(n2 / 10);
     ft_print_char((n2 % 10) + 48);
-    return  (i);
+}
+
+int ft_print_nbr(int n)
+{
+    int i;
+
+    i = ft_count(n);
+    ft_put_nbr(n);
+    return (i);
 }
