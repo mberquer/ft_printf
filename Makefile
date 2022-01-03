@@ -1,4 +1,8 @@
 SRCS	=	ft_printf.c\
+			ft_print_char.c\
+			ft_print_nbr.c\
+			ft_print_str.c\
+			ft_print_unsigned.c\
 
 OBJS	= ${SRCS:.c=.o}
 
@@ -20,7 +24,6 @@ ${NAME}:	${OBJS}
 
 clean:
 		${RM} ${OBJS}
-		${RM} ${OBJSBON}
 
 fclean:		clean
 		${RM} ${NAME}

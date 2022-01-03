@@ -4,7 +4,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-int ft_printf(const char format, ...);
+int ft_printf(const char *format, ...);
 int ft_print_char(char c);
 int ft_print_str(char *s);
 int ft_print_ptr(void *p);
