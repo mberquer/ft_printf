@@ -3,6 +3,8 @@ SRCS	=	ft_printf.c\
 			ft_print_nbr.c\
 			ft_print_str.c\
 			ft_print_unsigned.c\
+			ft_print_hexa.c\
+			ft_print_ptr.c\
 
 OBJS	= ${SRCS:.c=.o}
 

@@ -1,8 +1,23 @@
-#include "libftprintf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/06 11:15:20 by mberquer          #+#    #+#             */
+/*   Updated: 2022/01/06 13:44:21 by mberquer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_print_ptr(void *p)
+#include "ft_printf.h"
+
+int ft_print_ptr(unsigned long int p)
 {
-	ft_print_str("0x");
-	ft_put_ptr(p);
+	int	len;
 
+	len = 2;
+	ft_print_str("0x");
+	len += ft_print_hexa(p, 'x');
+	return (len);
 }

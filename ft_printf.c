@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int ft_format_print(char format, va_list args)
 {
@@ -7,7 +7,7 @@ int ft_format_print(char format, va_list args)
     else if (format == 's')
         return (ft_print_str(va_arg(args, char *)));
     else if (format == 'p')
-        return (ft_print_ptr(va_arg(args, void *)));
+        return (ft_print_ptr(va_arg(args, unsigned long int)));
     else if (format == 'd' || format == 'i')
         return (ft_print_nbr(va_arg(args, int)));
     else if (format == 'u')
