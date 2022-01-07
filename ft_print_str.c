@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_str.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/07 10:30:51 by mberquer          #+#    #+#             */
+/*   Updated: 2022/01/07 10:32:24 by mberquer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_print_str(char *s)
+int	ft_print_str(char *s)
 {
+	int	i;
+
 	if (s)
 	{
-		int i;
-
 		i = 0;
 		while (s[i])
 		{
@@ -14,5 +26,5 @@ int ft_print_str(char *s)
 		}
 		return (i);
 	}
-	return(ft_print_str("(null)"));
+	return (ft_print_str("(null)"));
 }

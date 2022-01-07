@@ -6,14 +6,14 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 11:54:35 by mberquer          #+#    #+#             */
-/*   Updated: 2022/01/06 13:44:08 by mberquer         ###   ########.fr       */
+/*   Updated: 2022/01/07 10:28:20 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
 static	int	ft_count(unsigned long int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (n == 0)
@@ -35,8 +35,8 @@ static	void	ft_put_hexa(unsigned long int n, const char *base)
 
 int	ft_print_hexa(unsigned long int n, char f)
 {
-	const char *base1 = "0123456789abcdef";
-	const char *base2 = "0123456789ABCDEF";
+	const char	*base1 = "0123456789abcdef";
+	const char	*base2 = "0123456789ABCDEF";
 
 	if (f == 'x')
 	{
